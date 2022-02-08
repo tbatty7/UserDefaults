@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet private(set) var incrementButton: UIButton!
     @IBOutlet private(set) var counterLabel: UILabel!
     
-    var userDefaults = UserDefaults.standard
+    var userDefaults: UserDefaultsProtocol = UserDefaults.standard
     
     private var count = 0 {
         didSet {
@@ -30,3 +30,8 @@ class ViewController: UIViewController {
     }
 }
 
+extension UserDefaults: UserDefaultsProtocol {}
+protocol UserDefaultsProtocol {
+    func set(_ value: Int, forKey defaultName: String)
+    func integer(forKey defaultName: String) -> Int
+}
