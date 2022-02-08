@@ -15,6 +15,7 @@
 		2237708627B2F860002AEF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2237708427B2F860002AEF11 /* LaunchScreen.storyboard */; };
 		223770AC27B303B9002AEF11 /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223770AB27B303B9002AEF11 /* FakeUserDefaults.swift */; };
 		223770AE27B30590002AEF11 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223770AD27B30590002AEF11 /* ViewControllerTests.swift */; };
+		223770B027B30CF3002AEF11 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223770AF27B30CF3002AEF11 /* TestHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		2237708C27B2F860002AEF11 /* UserDefaultsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserDefaultsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223770AB27B303B9002AEF11 /* FakeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
 		223770AD27B30590002AEF11 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		223770AF27B30CF3002AEF11 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				223770AB27B303B9002AEF11 /* FakeUserDefaults.swift */,
 				223770AD27B30590002AEF11 /* ViewControllerTests.swift */,
+				223770AF27B30CF3002AEF11 /* TestHelper.swift */,
 			);
 			path = UserDefaultsTests;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223770B027B30CF3002AEF11 /* TestHelper.swift in Sources */,
 				223770AE27B30590002AEF11 /* ViewControllerTests.swift in Sources */,
 				223770AC27B303B9002AEF11 /* FakeUserDefaults.swift in Sources */,
 			);

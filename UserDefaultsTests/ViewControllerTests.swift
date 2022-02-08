@@ -11,7 +11,6 @@ final class ViewControllerTests: XCTestCase {
         viewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
         defaults = FakeUserDefaults()
         viewController.userDefaults = defaults
-
     }
     
     override func tearDown() {
@@ -28,9 +27,17 @@ final class ViewControllerTests: XCTestCase {
     
     func test_viewDidLoad_with7InUserDefaults_shouldShow7InCounterLabel() {
         defaults.integers = ["count": 7]
-        
         viewController.loadViewIfNeeded()
         
         XCTAssertEqual(viewController.counterLabel.text, "7")
+    }
+    
+    func test_tappingButton_with12InUserDefaults_shouldWrite13ToUserDefaults() {
+        defaults.integers = ["count": 12]
+        viewController.loadViewIfNeeded()
+        
+        tap(viewController.incrementButton)
+        
+        XCTAssertEqual(viewController.counterLabel.text, "13")
     }
 }
