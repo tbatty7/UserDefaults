@@ -38,6 +38,15 @@ final class ViewControllerTests: XCTestCase {
         
         tap(viewController.incrementButton)
         
-        XCTAssertEqual(viewController.counterLabel.text, "13")
+        XCTAssertEqual(defaults.integers["count"], 13)
+    }
+    
+    func test_tappingButton_with42InUserDefaults_shouldWrite43ToUserDefaults() {
+        defaults.integers = ["count": 42]
+        viewController.loadViewIfNeeded()
+        
+        tap(viewController.incrementButton)
+        
+        XCTAssertEqual(viewController.counterLabel.text, "43")
     }
 }
